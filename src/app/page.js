@@ -50,7 +50,7 @@ export default function Home() {
             <p className='underline font-medium text-sm'>View Case Study</p>
           </div>
           <div className='flex justify-between pt-12'>
-            <p className='text-[13px] font-medium'>Trusted by the world's <br /> biggest brand</p>
+            <p className='text-[13px] font-medium'>Trusted by the world&apos;s <br /> biggest brand</p>
             <div className='flex space-x-4 items-center'>
               <p className='flex items-center text-[#8b9397] font-medium'>afterpay <Image className="pt-1" src="/images/afterpay.svg" width={20} height={0} alt=""/> </p>
               <Image src="/images/basecamp.svg" alt="Hamburger" width={70} height={0} />
