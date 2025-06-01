@@ -151,7 +151,7 @@ export default function Home() {
           </div>
         </div>
         <div className="px-6 md:px-[60px] pt-12 text-center md:text-left">
-          <p className="font-semibold text-xl">"They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition."</p>
+          <p className="font-semibold text-xl">&quot;They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition.&quot;</p>
           <div className="flex flex-col md:flex-row items-center gap-5 justify-between pt-8">
             <div className="flex items-center gap-3">
               <div className="rounded-full w-14 h-14 bg-gray-300"></div>
