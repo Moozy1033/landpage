@@ -80,7 +80,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='bg-black flex rounded-xl justify-between px-5 lg:pt-5 pt-5 lg:mt-5 mt-12'>
+            <div className='bg-black flex rounded-xl gap-3 justify-between px-5 lg:pt-5 pt-5 lg:mt-5 mt-12'>
               <div className='lg:pb-3 md:pb-4'>
                 <div className='flex items-center space-x-3 pt-4 md:pt-6 lg:pt-0'>
                   <div className='bg-white h-[2px] w-[30px] md:w-[40px] border-0'></div>
@@ -125,8 +125,60 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-[#FDFDFD]">
-        <div className="rounded-lg bg-black mx-5 px-1 text-center">
-        <p className="text-white text-3xl font-semibold">Real-worlds example of how we helped companies  achieve their marketing objectives</p>
+        <div className="rounded-lg bg-black mx-6 px-6 py-8 text-center">
+          <p className="text-white text-xl md:text-3xl font-semibold">Real-worlds example of how we helped companies  achieve their marketing objectives</p>
+          <div className="flex flex-col md:flex-row gap-3 py-10 justify-center">
+            <button className="rounded-full md:w-56 border border-white py-2.5 px-10 text-white font-semibold text-sm">All Work [20] </button>
+            <button className="rounded-full md:w-56 border border-none py-2.5 px-10 text-white bg-lime-400 font-semibold text-sm">UI/UX Design [10] </button>
+            <button className="rounded-full md:w-56 border border-white py-2.5 px-10 text-white font-semibold text-sm">Digital Markerting [5] </button>
+            <button className="rounded-full md:w-56 border border-white py-2.5 px-10 text-white font-semibold text-sm">Branding [5] </button>
+          </div>
+          <div className="flex flex-col md:pt-7 md:flex-row items-center  lg:justify-between gap-6">
+            {/* Left Circle */}
+            <div className="lg:w-70 lg:h-70 md:w-75 md:h-65 w-65 h-65 rounded-full bg-gray-300 flex items-center justify-center border-4 border-gray-400">
+              <button className="bg-lime-400 text-black text-sm font-medium py-10 px-4 rounded-full">
+                See Details
+              </button>
+            </div>
+            <div className="w-72 h-64 bg-gray-300 rounded-2xl p-4 flex flex-col justify-between text-white">
+              <p className="text-sm text-gray-100 border-t border-gray-100 pt-1">Ai Corporation. 2023</p>
+              <p className="text-lg font-semibold">Ai Wave – Ai Chatbot Mobile App</p>
+            </div>
+            <div className="w-72 h-64 bg-gray-300 rounded-2xl p-4 flex flex-col justify-between text-white">
+              <p className="text-sm text-gray-100 border-t border-gray-100 pt-1">Lancer Corporation. 2023</p>
+              <p className="text-lg font-semibold">App Lancer – Freelance Mobile App</p>
+            </div>
+          </div>
+        </div>
+        <div className="px-6 md:px-[60px] pt-12 text-center md:text-left">
+          <p className="font-semibold text-xl">"They thoroughly analyze our industry and target audience, allowing them to develop customized campaigns that effectively reach and engage our customers. Their creative ideas and cutting-edge techniques have helped us stay ahead of the competition."</p>
+          <div className="flex flex-col md:flex-row items-center gap-5 justify-between pt-8">
+            <div className="flex items-center gap-3">
+              <div className="rounded-full w-14 h-14 bg-gray-300"></div>
+              <div className="text-start">
+                <p className="text-base font-semibold ">Michael Kaizer</p>
+                <p className="text-[12px] font-semibold text-gray-400">CEO of Basecamp Corp</p>
+              </div>
+            </div>
+            {/* Div 2 */}
+            <div className="flex items-center gap-4 py-6 ">
+              {/* Left Arrow Button */}
+              <button className="w-18 h-11 rounded-full border border-black flex items-center justify-center">
+                <Image src="/images/arrow-left.svg" alt="Hamburger" width={20} height={0} />
+              </button>
+
+              {/* Indicator */}
+              <div className="flex items-end gap-1">
+                <span className="font-bold underline text-black text-sm">01</span>
+                <span className="text-gray-400 text-sm">/05</span>
+              </div>
+
+              {/* Right Arrow Button */}
+              <button className="w-18 h-11 rounded-full bg-black text-white flex items-center justify-center">
+                <Image src="/images/arrow-right1.svg" alt="Hamburger" width={20} height={0} />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </>
