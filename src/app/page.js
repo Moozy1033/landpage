@@ -211,7 +211,7 @@ export default function Home() {
             </div>
             <div className="max-w-md mx-auto border-b">
               <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
-                <span className="font-semibold text-lg">How can digital marketing help improve my website's visibility?</span>
+                <span className="font-semibold text-lg">How can digital marketing help improve my website&apos;s visibility?</span>
                 {open ? (
                   <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
                 ) : (
