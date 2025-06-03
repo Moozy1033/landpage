@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <nav className='bg-[#FDFDFD]'>
+      <nav className='bg-[#f5f5f5]'>
         <div className='lg:flex hidden justify-between px-[60px] md:py-5 items-center'>
           <div className='flex items-center space-x-[60px] '>
             <p className='font-bold text-xl'>MAC</p>
@@ -37,7 +41,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className='bg-[#FDFDFD]  '>
+      <section className='bg-[#f5f5f5]  '>
         <div className="px-6 md:px-[60px]  lg:text-left lg:flex lg:gap-10 justify-between">
           <div className='pt-4'>
             <p className='lg:text-5xl text-4xl font-semibold text-center lg:text-start'>Stay ahead of the <span className='hidden lg:inline'><br /></span> curve with our  <span className="hidden lg:inline"><br /></span> forward-thinking</p>
@@ -124,7 +128,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#FDFDFD]">
+      <section className="bg-[#f5f5f5] ">
         <div className="rounded-lg bg-black mx-6 px-6 py-8 text-center">
           <p className="text-white text-xl md:text-3xl font-semibold">Real-worlds example of how we helped companies  achieve their marketing objectives</p>
           <div className="flex flex-col md:flex-row gap-3 py-10 justify-center">
@@ -177,6 +181,70 @@ export default function Home() {
               <button className="w-18 h-11 rounded-full bg-black text-white flex items-center justify-center">
                 <Image src="/images/arrow-right1.svg" alt="Hamburger" width={20} height={0} />
               </button>
+            </div>
+          </div>
+        </div>
+        <div className="md:mx-6 mx-4 px-4 md:px-10 py-10 bg-white rounded-lg  flex flex-col md:flex-row gap-10 justify-between">
+          <div className="pt-1 flex-1">
+            <p className="md:text-4xl text-3xl text-center md:text-left font-semibold">Digital Marketing FAQS</p>
+            <p className="text-sm text-gray-500 py-6">As a leading digital marketing agency, we are dedicated to providing <span className="hidden lg:inline"><br /></span> comprehensive educational resources and answering frequently <span className="hidden lg:inline"><br /></span> asked questions to help our clients.</p>
+            <div className="flex justify-between md:justify-start items-center gap-9">
+              <button className=" border border-black font-semibold px-5 py-2.5 rounded-full text-[13px]">More Questions</button>
+              <Link className="underline text-[13px] font-semibold" href="">Contact Us</Link>
+            </div>
+          </div>
+          <div className="flex-1">
+            <div className="max-w-md mx-auto  border-b border-t">
+              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
+                <span className="font-semibold text-lg">Why is digital marketing important for my business?</span>
+                {open ? (
+                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
+                ) : (
+                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
+                )}
+              </button>
+              {open && (
+                <p className="pb-4 text-gray-500 text-sm">
+                  Digital Marketing allow businesses to reach and engage with a wider  audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize  their strategies based on data and insights.
+                </p>
+              )}
+            </div>
+            <div className="max-w-md mx-auto border-b">
+              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
+                <span className="font-semibold text-lg">How can digital marketing help improve my website's visibility?</span>
+                {open ? (
+                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
+                ) : (
+                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
+                )}
+              </button>
+              {open && (
+                <p className="pb-4 text-gray-500 text-sm"> </p>
+              )}
+            </div>
+            <div className="max-w-md mx-auto border-b">
+              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
+                <span className="font-semibold text-lg">How do you measure the success of digital marketing campaigns</span>
+                {open ? (
+                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
+                ) : (
+                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
+                )}
+              </button>
+              {open && (
+                <p className="pb-4 text-gray-500 text-sm"> </p>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="px-6 md:px-[60px] flex flex-col md:flex-row gap-8 py-15">
+          <div className="">
+            <p className="lg:text-4xl md:text-3xl font-semibold">Digital Marketing & SEO <span className="hidden lg:inline"><br /></span> Services That Grow Traffic & Increase Revenue</p>
+          </div>
+          <div className="">
+            <p className="text-sm text-gray-500">We are the top digital marketing agency for branding cop. We offer a full <span className="hidden lg:inline"><br /></span> range of services to help clients improve their engine rankings  and drive more traffic to their websites. </p>
+            <div>
+              <button className=" border border-black font-semibold px-7 py-2 mt-7 rounded-full text-[13px]">See more</button>
             </div>
           </div>
         </div>
