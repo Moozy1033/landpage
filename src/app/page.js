@@ -248,6 +248,54 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="px-6 md:px-[60px] flex flex-col md:flex-row gap-5 justify-between pb-15">
+          <div className="rounded-lg bg-white py-2 w-full md:w-1/3 px-4">
+            <div className="flex justify-between items-center pt-1">
+              <div className="h-2 w-2 bg-blue-300 rounded-full"></div>
+              <p className="text-gray-400 text-sm">5 min read</p>
+            </div>
+            <p className="font-semibold pb-2 text-base lg:text-lg">How a Digital Marketing Agency Can Boost Your Business </p>
+            <div className="flex gap-6 items-center justify-between py-3">
+              <p className="text-[12px] text-gray-400">We are the top digital marketing  agency for branding corp. We  offer a full rang engine...</p>
+              <button className="w-25 h-7 rounded-full bg-black text-white flex items-center justify-center">
+                <Image src="/images/arrow-right1.svg" alt="Hamburger" width={15} height={0} />
+              </button>
+            </div>
+          </div>
+          <div className="rounded-lg bg-white py-2 w-full md:w-1/3 px-4">
+            <div className="flex justify-between items-center pt-1">
+              <div className="h-2 w-2 bg-rose-500 rounded-full"></div>
+              <p className="text-gray-400 text-sm">5 min read</p>
+            </div>
+            <p className="font-semibold pb-2 text-base lg:text-lg">The Latest Trend and Strategies with a Digital Marketing Agency </p>
+            <div className="flex gap-4 items-center py-3">
+              <p className="text-[12px] text-gray-400">Working with this digital marketing agency has been a true partnership. They have tak...</p>
+              <button className="w-23 h-7 rounded-full bg-white border border-black text-white flex items-center justify-center">
+                <Image src="/images/arrow-rightb.svg" alt="Hamburger" width={18} height={0} />
+              </button>
+            </div>
+          </div>
+          <div className="rounded-lg bg-white py-2 w-full md:w-1/3 px-4">
+            <div className="flex justify-between items-center pt-1">
+              <div className="h-2 w-2 bg-purple-500 rounded-full"></div>
+              <p className="text-gray-400 text-sm">5 min read</p>
+            </div>
+            <p className="font-semibold pb-2 text-base lg:text-lg">Maximizing ROI with the Expertise of a Digital Marketing Agency</p>
+            <div className="flex gap-6 items-center py-3">
+              <p className="text-[12px] text-gray-400">What sets the digital marketing agency  apart is their commitment to transparency a...</p>
+              <button className="w-23 h-7 rounded-full bg-white border border-black text-white flex items-center justify-center">
+                <Image src="/images/arrow-rightb.svg" alt="Hamburger" width={18} height={0} />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="bg-black flex-col md:flex-row rounded-xl flex md:mx-6 mx-4 px-4 md:text-left text-center md:ps-8 md:pr-16 gap-5 py-11 justify-between items-center">
+          <p className="text-white text-3xl md:text-4xl lg:text-5xl">Ready to work with us ?</p>
+          <button className=' bg-white items-center rounded-full py-3 px-5 text-sm font-bold flex gap-5'>
+            Get started
+            <Image src="/images/blackarrow-right.svg" alt="Hamburger" width={20} height={0} />
+          </button>
+        </div>
       </section>
     </>
   );
