@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -12,7 +13,7 @@ export default function Home() {
           <div className='flex items-center space-x-[60px] '>
             <p className='font-bold text-xl'>MAC</p>
             <ul className='space-x-5 font-medium list-none flex text-base '>
-              <select className='' name="" id="">
+              <select className='bg-transparent outline-none' name="" id="">
                 <option value="">Service</option>
               </select>
               <select className='' name="" id="">
@@ -37,8 +38,29 @@ export default function Home() {
         {/* Small screen nav */}
         <div className='px-6 flex lg:hidden md:px-[60px] justify-between py-5'>
           <p className='font-bold text-xl'>MAC</p>
-          <Image src="/images/hamburger.svg" alt="Hamburger" width={30} height={0} />
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            <Image src="/images/hamburger.svg" alt="Hamburger" width={30} height={0} />
+          </button>
         </div>
+        {menuOpen && (
+          <div className="lg:hidden px-6 md:px-[60px] pb-4 space-y-3">
+            <ul className="flex flex-col space-y-2 font-medium text-base">
+              <li><select className="w-full bg-transparent outline-none"><option>Service</option></select></li>
+              <li><select className="w-full bg-transparent outline-none"><option>Agency</option></select></li>
+              <li><select className="w-full bg-transparent outline-none"><option>Case Study</option></select></li>
+              <li><select className="w-full bg-transparent outline-none"><option>Resources</option></select></li>
+              <li className="cursor-pointer">Contact</li>
+            </ul>
+            <div className="flex space-y-2 gap-3 mt-4">
+              <button className="py-2 w-full rounded-full text-base font-medium border border-black">
+                Get Started
+              </button>
+              <button className="rounded-full  bg-black px-3 py-2 self-start">
+                <Image src="/images/notification.svg" alt="Notification" width={20} height={20} />
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       <section className='bg-[#f5f5f5]  '>
@@ -257,7 +279,7 @@ export default function Home() {
             <p className="font-semibold pb-2 text-base lg:text-lg">How a Digital Marketing Agency Can Boost Your Business </p>
             <div className="flex gap-6 items-center justify-between py-3">
               <p className="text-[12px] text-gray-400">We are the top digital marketing  agency for branding corp. We  offer a full rang engine...</p>
-              <button className="w-25 h-7 rounded-full bg-black text-white flex items-center justify-center">
+              <button className="w-24 h-7 rounded-full bg-black text-white flex items-center justify-center">
                 <Image src="/images/arrow-right1.svg" alt="Hamburger" width={15} height={0} />
               </button>
             </div>
@@ -268,7 +290,7 @@ export default function Home() {
               <p className="text-gray-400 text-sm">5 min read</p>
             </div>
             <p className="font-semibold pb-2 text-base lg:text-lg">The Latest Trend and Strategies with a Digital Marketing Agency </p>
-            <div className="flex gap-4 items-center py-3">
+            <div className="flex gap-4 items-center justify-between py-3">
               <p className="text-[12px] text-gray-400">Working with this digital marketing agency has been a true partnership. They have tak...</p>
               <button className="w-23 h-7 rounded-full bg-white border border-black text-white flex items-center justify-center">
                 <Image src="/images/arrow-rightb.svg" alt="Hamburger" width={18} height={0} />
@@ -281,7 +303,7 @@ export default function Home() {
               <p className="text-gray-400 text-sm">5 min read</p>
             </div>
             <p className="font-semibold pb-2 text-base lg:text-lg">Maximizing ROI with the Expertise of a Digital Marketing Agency</p>
-            <div className="flex gap-6 items-center py-3">
+            <div className="flex gap-6 items-center justify-between py-3">
               <p className="text-[12px] text-gray-400">What sets the digital marketing agency  apart is their commitment to transparency a...</p>
               <button className="w-23 h-7 rounded-full bg-white border border-black text-white flex items-center justify-center">
                 <Image src="/images/arrow-rightb.svg" alt="Hamburger" width={18} height={0} />
@@ -297,6 +319,76 @@ export default function Home() {
           </button>
         </div>
       </section>
+      <footer className="bg-[#f5f5f5] px-6 md:px-20 py-12 text-sm text-gray-600">
+        <div className="flex flex-col md:flex-row justify-between gap-12">
+
+          {/* Column 1: Logo + Description + Social Icons */}
+          <div className="lg:w-1/3 space-y-6">
+            <div className="flex items-center gap-2">
+              {/* <Image src="/images/logo.svg" alt="MAC Logo" width={28} height={28} /> */}
+              <h2 className="font-bold text-xl text-black">MAC</h2>
+            </div>
+            <p>
+              We offer a comprehensive suite of digital marketing services that cover all aspects of our online presence. From SEO and social media marketing to content creation and PPC advertising, they have the expertise and resources to handle our diverse marketing needs.
+            </p>
+            <div className="flex gap-4">
+              <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
+              <Image src="/images/facebook.svg" alt="Facebook" width={9} height={9} />
+              </div>
+              <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
+              <Image src="/images/twitter.svg" alt="Twitter" width={20} height={20} />
+              </div>
+              <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
+              <Image src="/images/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+              </div>
+              <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
+              <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2: Navigation */}
+          <div>
+            <h3 className="font-semibold text-black mb-4">Navigation</h3>
+            <ul className="space-y-2">
+              <li><Link href="">Service</Link></li>
+              <li><Link href="">Agency</Link></li>
+              <li><Link href="">Case Study</Link></li>
+              <li><Link href="">Resource</Link></li>
+              <li><Link href="">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: License */}
+          <div>
+            <h3 className="font-semibold text-black mb-4">Licence</h3>
+            <ul className="space-y-2">
+              <li><Link href="">Privacy Policy</Link></li>
+              <li><Link href="">Copyright</Link></li>
+              <li><Link href="">Email Address</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact */}
+          <div>
+            <h3 className="font-semibold text-black mb-4">Contact</h3>
+            <ul className="space-y-3">
+              <li className="flex gap-2 items-center">
+                <Image src="/images/call.svg" alt="Phone" width={18} height={16} />
+                (406) 555-0120
+              </li>
+              <li className="flex gap-2 items-start">
+                <Image src="/images/mail.svg" alt="Email" width={18} height={18} />
+                Hey@boostim.com
+              </li>
+              <li className="flex gap-2 items-start">
+                <Image src="/images/location.svg" alt="Location" width={16} height={16} />
+                2972 Westheimer Rd. Santa Ana, <br />Illinois 85486
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
