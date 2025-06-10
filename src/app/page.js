@@ -64,10 +64,10 @@ export default function Home() {
       </nav>
 
       <section className='bg-[#f5f5f5]  '>
-        <div className="px-6 md:px-[60px]  lg:text-left lg:flex lg:gap-10 justify-between">
-          <div className='pt-4'>
-            <p className='lg:text-5xl text-4xl font-semibold text-center lg:text-start'>Stay ahead of the <span className='hidden lg:inline'><br /></span> curve with our  <span className="hidden lg:inline"><br /></span> forward-thinking</p>
-            <p className='text-sm pt-6 text-gray-500 text-center lg:text-start'>An award-winning SEO agency with disciplines in digital marketing, <span className="hidden lg:inline"><br /></span>  design and website development. focus on understanding you.</p>
+        <div className="px-6 md:px-[60px]  lg:text-left lg:flex lg:items-start lg:gap-20 lg:justify-between">
+          <div className='pt-4 flex-1'>
+            <p className='lg:text-5xl text-4xl font-semibold text-center lg:text-start'>Stay ahead of the curve with our forward-thinking</p>
+            <p className='text-sm pt-6 text-gray-500 text-center lg:text-start'>An award-winning SEO agency with disciplines in digital marketing, design and website development. focus on understanding you.</p>
             <div className='flex justify-center lg:justify-start items-center gap-10 pt-8'>
               <button className='text-white bg-black rounded-full py-2 px-5 text-sm font-medium flex gap-5'>
                 Schedule call
@@ -75,21 +75,21 @@ export default function Home() {
               </button>
               <p className='underline font-medium text-sm'>View Case Study</p>
             </div>
-            <div className='flex justify-between pt-15'>
-              <p className='text-[13px] font-medium'>Trusted by the world&apos;s <br /> biggest brand</p>
+            <div className='flex justify-between gap-10 pt-15'>
+              <p className='text-[13px] font-medium'>Trusted by the world&apos;s biggest brand</p>
               <div className='flex space-x-4 items-center'>
                 <p className='flex items-center text-[#8b9397] font-medium'>afterpay <Image className="pt-1" src="/images/afterpay.svg" width={20} height={0} alt="" /> </p>
                 <Image src="/images/basecamp.svg" alt="Hamburger" width={70} height={0} />
                 <p className='flex items-center gap-1 text-[#8b9397] font-medium'>maze <Image className='pt-1' src="/images/maze.svg" width={20} height={0} alt="" /> </p>
               </div>
             </div>
-            <div>
-              <p className="md:text-3xl text-2xl font-semibold pt-20 text-center lg:text-start">Provide the best service with <span className="hidden lg:inline"><br /></span>out of the box ideas</p>
+            <div className="pt-20">
+              <p className="md:text-3xl text-2xl font-semibold  text-center lg:text-start">Provide the best service with out of the box ideas</p>
             </div>
           </div>
-          <div className='pt-9'>
+          <div className='pt-9 flex-1'>
             <div className='flex lg:gap-3 md:gap-7 gap-5'>
-              <div className='relative w-1/2'>
+              <div className='relative w-1/2 '>
                 <div className='py-[100px] lg:px-[110px] px-[92px] md:px-[150px]  bg-[#C8C8C8] rounded-tl-[100%] rounded-lg'></div>
                 <div className="absolute -top-4 right-6 bg-black p-4 rounded-full shadow-md">
                   <Image src="/images/graph-arrow.svg" alt="Hamburger" width={26} height={0} />
@@ -100,7 +100,7 @@ export default function Home() {
                   <p className='lg:text-6xl  text-4xl font-bold'>230</p>
                   <p className='lg:text-6xl text-4xl font-bold'>+</p>
                 </div>
-                <p className='md:text-sm text-[12px]  text-gray-600 pt-3'>Some big companies  that <span className="hidden lg:inline"><br /></span>  we work with,  and trust us <span className="hidden lg:inline"><br /></span> very much</p>
+                <p className='md:text-sm text-[12px]  text-gray-600 pt-3'>Some big companies  that we work with,  and trust us very much</p>
                 <div className=''>
                   <hr className='bg-black py-[2px] mt-5 mb-2' />
                 </div>
@@ -121,7 +121,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <p className="text-[13px] text-gray-500 text-center md:text-start pt-12 md:pt-18 px-1">We are passionate team of digital marketing enthusiasts dedicated to <span className="hidden lg:inline"><br /></span> helping business succeed in the digital world. With years of experience <span className="hidden lg:inline"><br /></span> and a deep understanding of the ever-evolving online landscape, we stay <span className="hidden lg:inline"><br /></span> at the forefront of industry trends and technologies.</p>
+              <p className="text-[13px] text-gray-500 text-center md:text-start pt-12 md:pt-18 lg:pt-14 px-1">We are passionate team of digital marketing enthusiasts dedicated to  helping business succeed in the digital world. With years of experience  and a deep understanding of the ever-evolving online landscape, we stay at the forefront of industry trends and technologies.</p>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Home() {
         <div className="md:mx-6 mx-4 px-4 md:px-10 py-10 bg-white rounded-lg  flex flex-col md:flex-row gap-10 justify-between">
           <div className="pt-1 flex-1">
             <p className="md:text-4xl text-3xl text-center md:text-left font-semibold">Digital Marketing FAQS</p>
-            <p className="text-sm text-gray-500 py-6">As a leading digital marketing agency, we are dedicated to providing <span className="hidden lg:inline"><br /></span> comprehensive educational resources and answering frequently <span className="hidden lg:inline"><br /></span> asked questions to help our clients.</p>
+            <p className="text-sm text-gray-500 py-6">As a leading digital marketing agency, we are dedicated to providing  comprehensive educational resources and answering frequently  asked questions to help our clients.</p>
             <div className="flex justify-between md:justify-start items-center gap-9">
               <button className=" border border-black font-semibold px-5 py-2.5 rounded-full text-[13px]">More Questions</button>
               <Link className="underline text-[13px] font-semibold" href="">Contact Us</Link>
@@ -259,12 +259,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="px-6 md:px-[60px] flex flex-col md:flex-row gap-8 py-15">
+        <div className="px-6 md:px-[60px] flex flex-col md:flex-row gap-10 py-15">
           <div className="">
-            <p className="lg:text-4xl md:text-3xl font-semibold">Digital Marketing & SEO <span className="hidden lg:inline"><br /></span> Services That Grow Traffic & Increase Revenue</p>
+            <p className="lg:text-4xl md:text-3xl font-semibold">Digital Marketing & SEO Services That Grow Traffic & Increase Revenue</p>
           </div>
           <div className="">
-            <p className="text-sm text-gray-500">We are the top digital marketing agency for branding cop. We offer a full <span className="hidden lg:inline"><br /></span> range of services to help clients improve their engine rankings  and drive more traffic to their websites. </p>
+            <p className="text-sm text-gray-500">We are the top digital marketing agency for branding cop. We offer a full range of services to help clients improve their engine rankings  and drive more traffic to their websites. </p>
             <div>
               <button className=" border border-black font-semibold px-7 py-2 mt-7 rounded-full text-[13px]">See more</button>
             </div>
