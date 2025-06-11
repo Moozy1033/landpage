@@ -75,9 +75,9 @@ export default function Home() {
               </button>
               <p className='underline font-medium text-sm'>View Case Study</p>
             </div>
-            <div className='flex justify-between gap-10 pt-15'>
+            <div className='flex flex-col md:flex-row text-center md:text-start justify-between gap-6 md:gap-10 pt-15'>
               <p className='text-[13px] font-medium'>Trusted by the world&apos;s biggest brand</p>
-              <div className='flex space-x-4 items-center'>
+              <div className='flex space-x-4 justify-center md:items-center'>
                 <p className='flex items-center text-[#8b9397] font-medium'>afterpay <Image className="pt-1" src="/images/afterpay.svg" width={20} height={0} alt="" /> </p>
                 <Image src="/images/basecamp.svg" alt="Hamburger" width={70} height={0} />
                 <p className='flex items-center gap-1 text-[#8b9397] font-medium'>maze <Image className='pt-1' src="/images/maze.svg" width={20} height={0} alt="" /> </p>
@@ -333,16 +333,16 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
               <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
-              <Image src="/images/facebook.svg" alt="Facebook" width={9} height={9} />
+                <Image src="/images/facebook.svg" alt="Facebook" width={9} height={9} />
               </div>
               <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
-              <Image src="/images/twitter.svg" alt="Twitter" width={20} height={20} />
+                <Image src="/images/twitter.svg" alt="Twitter" width={20} height={20} />
               </div>
               <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
-              <Image src="/images/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+                <Image src="/images/linkedin.svg" alt="LinkedIn" width={20} height={20} />
               </div>
               <div className="bg-white rounded-full h-9 w-9 flex justify-center items-center">
-              <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
+                <Image src="/images/instagram.svg" alt="Instagram" width={20} height={20} />
               </div>
             </div>
           </div>
