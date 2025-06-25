@@ -6,6 +6,24 @@ import { useState } from "react";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeIndex, SetActiveIndex] = useState(false)
+  const toggleIndex = (index) => {
+    SetActiveIndex(index === activeIndex ? false : index)
+  }
+  const question = [
+    {
+      question: "Why is digital marketing important for my business?",
+      answer: "Digital Marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights."
+    },
+    {
+      question: "How can digital marketing help improve my website's visibility?",
+      answer: "It improves visibility through SEO, content marketing, social media presence, and paid ads, helping more people find your website online."
+    },
+    {
+      question: "How do you measure the success of digital marketing campaigns?",
+      answer: "Success is measured through KPIs like website traffic, conversion rate, engagement, ROI, and other analytics data tools."
+    },
+  ]
   return (
     <>
       <nav className='bg-[#f5f5f5]'>
@@ -215,48 +233,19 @@ export default function Home() {
               <Link className="underline text-[13px] font-semibold" href="">Contact Us</Link>
             </div>
           </div>
+          {/* Accordion */}
           <div className="flex-1">
-            <div className="max-w-md mx-auto  border-b border-t">
-              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
-                <span className="font-semibold text-lg">Why is digital marketing important for my business?</span>
-                {open ? (
-                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
-                ) : (
-                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
+            {question.map((items, index) => (
+              <div key={index} className="max-w-md mx-auto  border-b border-t">
+                <button onClick={() => toggleIndex(index)} className="w-full text-left py-4 flex justify-between items-center">
+                  <span className="font-semibold text-lg">{items.question}</span>
+                  <Image src={activeIndex === index ? "/images/minus.svg" : "/images/plus.svg"} alt="Hamburger" width={26} height={0} />
+                </button>
+                {activeIndex === index && (
+                  <p className="pb-4 text-gray-500 text-sm"> {items.answer}</p>
                 )}
-              </button>
-              {open && (
-                <p className="pb-4 text-gray-500 text-sm">
-                  Digital Marketing allow businesses to reach and engage with a wider  audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize  their strategies based on data and insights.
-                </p>
-              )}
-            </div>
-            <div className="max-w-md mx-auto border-b">
-              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
-                <span className="font-semibold text-lg">How can digital marketing help improve my website&apos;s visibility?</span>
-                {open ? (
-                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
-                ) : (
-                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
-                )}
-              </button>
-              {open && (
-                <p className="pb-4 text-gray-500 text-sm"> </p>
-              )}
-            </div>
-            <div className="max-w-md mx-auto border-b">
-              <button onClick={() => setOpen(!open)} className="w-full text-left py-4 flex justify-between items-center">
-                <span className="font-semibold text-lg">How do you measure the success of digital marketing campaigns</span>
-                {open ? (
-                  <Image src="/images/minus.svg" alt="Hamburger" width={26} height={0} />
-                ) : (
-                  <Image src="/images/plus.svg" alt="Hamburger" width={26} height={0} />
-                )}
-              </button>
-              {open && (
-                <p className="pb-4 text-gray-500 text-sm"> </p>
-              )}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
         <div className="px-6 md:px-[60px] flex flex-col md:flex-row gap-10 py-15">
